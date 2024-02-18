@@ -39,7 +39,7 @@ const ExperienceSection = () => {
             Experience
           </span>
         </Title>
-        <div className="grid grid-cols-1 lg:gap-8 gap-5 lg:py-10 lg:px-6">
+        <div className="grid grid-cols-1 lg:gap-8 gap-5 lg:py-10 lg:px-6 justify-items-center">
           {Experience.map((experience) => (
             <ExperienceCard key={experience.job_name} {...experience} />
           ))}
