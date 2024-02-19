@@ -41,7 +41,7 @@ const Navlinks = ({ handleLinkClick, toggleNav }: Props) => {
       {Routes.map((route) => (
         <li key={route.path}>
           <Link
-            className="text-heading-h5-600 cursor-pointer hover:text-neutral transition-all relative after:w-full after:h-[2px] after:z-10 after:bg-neutral after:absolute after:content-[''] after:-bottom-1 after:translate-y-3 after:opacity-0 after:left-0 hover:after:translate-y-0 hover:after:opacity-100"
+            className="text-heading-h5-600 cursor-pointer hover:text-neutral transition-all relative after:w-full after:h-[2px] after:z-10 after:bg-neutral after:absolute after:content-[''] after:-bottom-1 after:translate-y-3 after:opacity-0 after:left-0 hover:after:translate-y-0 hover:after:opacity-100 max-md:w-4/5"
             href={route.path}
             onClick={handleLinkClick}
           >

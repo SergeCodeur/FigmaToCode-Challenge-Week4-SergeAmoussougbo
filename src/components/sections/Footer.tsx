@@ -9,7 +9,7 @@ const Footer = () => {
       <MaxContentWidthWrapper className="py-6 flex justify-between items-center">
         <Link href="/">
           <Image
-            className="relative z-[55]"
+            className="relative z-[55] max-md:w-4/5"
             src={Logo}
             alt="logo"
             width={139.91}
