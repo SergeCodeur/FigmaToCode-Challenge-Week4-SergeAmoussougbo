@@ -104,16 +104,20 @@ export const ProjectCard = React.forwardRef<HTMLDivElement, ProjectCardProps>(
       )}
       {...props}
     >
-      <div className="lg:w-2/4">
+      <div
+        className={`lg:w-[594px] ${
+          card_orientation === "right" ? "lg:pl-16" : "lg:pr-16"
+        }`}
+      >
         <Image
           src={project_image}
           alt="project image"
           className="rounded-[18.76px] h-full w-full"
-          width={530}
-          height={397.73}
+          width={532}
+          height={399.3}
         />
       </div>
-      <div className="space-y-7 lg:w-2/4">
+      <div className="space-y-7 lg:flex-1">
         <span className="lg:text-display-text-800 text-heading-h4-800 text-white">
           {project_number}
         </span>
