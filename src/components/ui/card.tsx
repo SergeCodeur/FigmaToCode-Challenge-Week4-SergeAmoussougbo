@@ -2,6 +2,8 @@ import * as React from "react";
 
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import Link from "next/link";
+import { RxExternalLink } from "react-icons/rx";
 
 export interface SkillsCardProps {
   className?: string;
@@ -25,6 +27,7 @@ export const SkillsCard = React.forwardRef<HTMLDivElement, SkillsCardProps>(
   )
 );
 SkillsCard.displayName = "SkillsCard";
+
 export interface ExperienceCardProps {
   className?: string;
   job_name: string;
@@ -66,4 +69,109 @@ export const ExperienceCard = React.forwardRef<
     </div>
   )
 );
-ExperienceCard.displayName = "SkillsCard";
+ExperienceCard.displayName = "EperienceCard";
+
+export interface ProjectCardProps {
+  className?: string;
+  project_image: string;
+  project_number: number | string;
+  project_name: string;
+  project_description: string;
+  project_link: string;
+  card_orientation?: "left" | "right";
+}
+
+export const ProjectCard = React.forwardRef<HTMLDivElement, ProjectCardProps>(
+  (
+    {
+      className,
+      project_name,
+      project_image,
+      project_number,
+      project_link,
+      project_description,
+      card_orientation = "left",
+      ...props
+    },
+    ref
+  ) => (
+    <div
+      ref={ref}
+      className={cn(
+        "flex max-md:flex-col w-full gap-10 items-center",
+        className,
+        card_orientation === "right" ? "flex-row-reverse" : ""
+      )}
+      {...props}
+    >
+      <div className="lg:w-2/4">
+        <Image
+          src={project_image}
+          alt="project image"
+          className="rounded-[18.76px] h-full w-full"
+          width={530}
+          height={397.73}
+        />
+      </div>
+      <div className="space-y-7 lg:w-2/4">
+        <span className="lg:text-display-text-800 text-heading-h4-800 text-white">
+          {project_number}
+        </span>
+        <h3 className="lg:text-heading-h2-700 text-heading-h5-800 text-white">
+          {project_name}
+        </h3>
+        <p className="text-zinc-500 text-paragraph-2">{project_description}</p>
+        <Link href={project_link} className="text-white inline-block">
+          <RxExternalLink size={20} />
+        </Link>
+      </div>
+    </div>
+  )
+);
+ProjectCard.displayName = "ProjectCard";
+
+export interface TestimonialsCardProps {
+  className?: string;
+  user_image: string;
+  user_name: string;
+  user_description: string;
+  user_job: string;
+}
+
+export const TestimonialsCard = React.forwardRef<
+  HTMLDivElement,
+  TestimonialsCardProps
+>(
+  (
+    { className, user_image, user_name, user_description, user_job, ...props },
+    ref
+  ) => (
+    <div
+      ref={ref}
+      className={cn(
+        "group p-10 flex flex-col gap-6 justify-center items-center shadow-card-shadow rounded-[20px] transition-all hover:bg-black bg-white w-full max-w-[370px]",
+        className
+      )}
+      {...props}
+    >
+      <Image
+        src={user_image}
+        alt=""
+        width={96}
+        height={96}
+        className="rounded-full"
+      />
+      <p className="text-neutral group-hover:text-white text-button-text2 text-center">
+        {user_description}
+      </p>
+      <div className="w-full h-[2px] group-hover:bg-white bg-black max-w-[120px] mx-auto"></div>
+      <h3 className="text-neutral group-hover:text-white text-heading-h5-600">
+        {user_name}
+      </h3>
+      <h4 className="text-zinc-500 group-hover:text-white text-heading-h6-600">
+        {user_job}
+      </h4>
+    </div>
+  )
+);
+TestimonialsCard.displayName = "TestimonialsCard";
