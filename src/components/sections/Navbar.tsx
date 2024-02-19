@@ -105,7 +105,7 @@ const Navbar = () => {
           </Button>
         </div>
         <button
-          className="block lg:hidden text-black relative z-50"
+          className="max-md:block hidden text-black relative z-50"
           onClick={handleClick}
         >
           <VscThreeBars size={36} />
