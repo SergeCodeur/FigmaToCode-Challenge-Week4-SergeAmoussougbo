@@ -40,7 +40,7 @@ const HeroBanner = () => {
               unknown printer took a galley of type and scrambled it to specimen
               book.
             </p>
-            <ul className="inline-flex gap-8 absolute lg:-bottom-[147px]">
+            <ul className="inline-flex lg:gap-8 gap-6 absolute lg:-bottom-[147px]">
               <li>
                 <Button variant="icon" asChild>
                   <Link href="#facebook">
