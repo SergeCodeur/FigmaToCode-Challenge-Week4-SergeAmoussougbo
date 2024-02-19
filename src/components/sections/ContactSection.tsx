@@ -25,28 +25,44 @@ const ContactSection = () => {
               </Button>
               <ul className="inline-flex gap-6">
                 <li>
-                  <Button variant="icon" className="h-[56px] w-[56px]" asChild>
+                  <Button
+                    variant="icon"
+                    className="lg:h-[56px] lg:w-[56px] w-12 h-12"
+                    asChild
+                  >
                     <Link href="#facebook">
                       <FaFacebook size={20} />
                     </Link>
                   </Button>
                 </li>
                 <li>
-                  <Button variant="icon" className="h-[56px] w-[56px]" asChild>
+                  <Button
+                    variant="icon"
+                    className="lg:h-[56px] lg:w-[56px] w-12 h-12"
+                    asChild
+                  >
                     <Link href="#reddit">
                       <FaReddit size={20} />
                     </Link>
                   </Button>
                 </li>
                 <li>
-                  <Button variant="icon" className="h-[56px] w-[56px]" asChild>
+                  <Button
+                    variant="icon"
+                    className="lg:h-[56px] lg:w-[56px] w-12 h-12"
+                    asChild
+                  >
                     <Link href="#twitter">
                       <FaTwitter size={20} />
                     </Link>
                   </Button>
                 </li>
                 <li>
-                  <Button variant="icon" className="h-[56px] w-[56px]" asChild>
+                  <Button
+                    variant="icon"
+                    className="lg:h-[56px] lg:w-[56px] w-12 h-12"
+                    asChild
+                  >
                     <Link href="#discord">
                       <IoLogoDiscord size={20} />
                     </Link>

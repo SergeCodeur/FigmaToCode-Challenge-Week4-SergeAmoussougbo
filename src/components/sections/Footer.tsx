@@ -16,7 +16,7 @@ const Footer = () => {
             height={40}
           />
         </Link>
-        <div className="flex flex-col lg:gap-3 gap-0 lg:text-heading-h6-600 text-paragraph-3-600 text-white">
+        <div className="flex flex-col lg:gap-3 gap-0 lg:text-heading-h6-600 text-paragraph-3-600 text-white items-end">
           <span>@ 2019-2023 Personal</span>
           <span>Made In Figma</span>
         </div>
