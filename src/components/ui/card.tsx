@@ -113,7 +113,7 @@ export const ProjectCard = React.forwardRef<HTMLDivElement, ProjectCardProps>(
         <Image
           src={project_image}
           alt="project image"
-          className="rounded-[18.76px] h-full w-full"
+          className="rounded-[18.76px] h-full w-full max-md:min-h-[397.73px] object-cover"
           width={532}
           height={399.3}
         />
