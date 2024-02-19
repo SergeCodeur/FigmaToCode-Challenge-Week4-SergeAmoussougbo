@@ -3,6 +3,7 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
+import { BiSolidQuoteRight } from "react-icons/bi";
 import { RxExternalLink } from "react-icons/rx";
 
 export interface SkillsCardProps {
@@ -158,13 +159,18 @@ export const TestimonialsCard = React.forwardRef<
       )}
       {...props}
     >
-      <Image
-        src={user_image}
-        alt=""
-        width={96}
-        height={96}
-        className="rounded-full"
-      />
+      <div className="relative">
+        <Image
+          src={user_image}
+          alt=""
+          width={96}
+          height={96}
+          className="rounded-full"
+        />
+        <span className="absolute bottom-0 right-0 z-30 inline-flex justify-center items-center rounded-full w-[30px] h-[30px] text-white bg-black group-hover:bg-white group-hover:text-black">
+          <BiSolidQuoteRight />
+        </span>
+      </div>
       <p className="text-neutral group-hover:text-white text-button-text2 text-center">
         {user_description}
       </p>
